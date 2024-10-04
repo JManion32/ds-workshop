@@ -7,8 +7,8 @@ int main(int argc, char* argv[]) {
   for(unsigned int i=1; i<argc; i++) {
     num_list.push_back(std::atoi(argv[i]));
   }
-
-  for(std::list<int>::iterator it = num_list.begin(); it != num_list.end(); ++it) {
+  std::list<int>::reverse_iterator it = num_list.end();
+  for(--it; it != num_list.begin(); --it) {
     std::cout << *it << " ";
   }
 
